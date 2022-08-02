@@ -1,0 +1,416 @@
+/*=============IMPORT GOOGLE FONT===============*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Red+Hat+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+:root{
+    /* ==================== Dark Mode (Default) ===================== */
+    --white-text-color: #D6D9DB;
+    --black-background-color: #000000;
+    --border-lines-grey: #2F3336;
+    --grey-background: #16181C ;
+    --animated-black: black;
+    --animated-white: var(--white-text-color);
+    --faint-dark-text: #6A6F73;
+}
+
+
+.light-mode-color{
+    /*======================== Light Mode (Secondary) ==========================*/
+    --white-text-color: #D6D9DB;
+    --black-background-color: #000000;
+    --border-lines-grey: #2F3336;
+    --grey-background: #16181C ;
+    --animated-black: black;
+    --animated-white: var(--white-text-color);
+    --faint-dark-text: #6A6F73;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--black-background-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+#main{
+    display: flex;
+    align-items: center;
+}
+
+aside{
+    padding: 1.4rem 2rem 1.4rem 2.5rem;
+    position: sticky;
+    top: 0;
+    flex-basis: 20%;
+    height: 100vh;
+}
+
+/* ==================================== Aside Logo ================================*/
+
+.logo{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+
+.logo p{
+   color: var(--animated-black);
+   font-size: 1.5rem;
+   font-weight: 400;
+   font-weight: 600;
+   transition: 0.9s all ease;
+}
+
+.logo span{
+   color: var(--white-text-color);
+   font-size: 2rem;
+   margin-right: 1.3rem;
+}
+
+.logo:hover p{
+    color: var(--animated-white);
+}
+
+/* ======================= Aside Lists ====================== */ 
+.aside-lists{
+    line-height: 3rem;
+}
+
+.list{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s ease all;
+}
+
+.aside-lists .list:last-child{
+    margin-top: 1rem;
+}
+
+.list p{
+    color: var(--white-text-color);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.list:first-child p{
+    font-weight: 600;
+}
+
+.list span{
+    color: var(--white-text-color);
+    font-size: 1.8rem;
+    margin-right: 1.3rem;
+    transition: 0.3s all ease;
+}
+
+.list:hover span{
+    color: #1D9BF0;
+}
+
+/* ==================================== Profile Container ============================ */
+.profile-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    background: var(--grey-background);
+    border-radius: 50px;
+    padding: 0.3rem;
+}
+
+.profile-container span{
+    color: var(--white-text-color);
+}
+
+.profile-container-details{
+    display: flex;
+    align-items: center;
+    line-height: 0.8rem;
+    cursor: pointer;
+}
+
+.profile-container-name p{
+    color: var(--white-text-color);
+    font-size: 0.8rem;
+}
+
+.profile-container-name p:last-child{
+    font-size: 0.8rem;
+    color: rgb(122, 122, 122);
+}
+
+.profile-container-pic img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin-right: 0.6rem;
+    border-radius: 50%;
+}
+
+
+/* ===================== Notification Blue Dot ============================ */
+.not-dot-container{
+    position: relative;
+}
+
+.red-dot-not{
+    position: absolute;
+    right:0px;
+    top: -17px;
+}
+
+.red-dot-not span{
+    font-size: 0.8rem;
+    color: #1D9BF0;
+}
+
+.btn{
+    width: 14rem;
+    border-radius: 50px;
+    height: 3.2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+    background: #1D9BF0;
+}
+
+
+/* =============================== middle ============================*/
+.middle{
+    flex-basis: 50%;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+
+.middle::-webkit-scrollbar{
+    display: none;
+}
+
+/* ============================= Feeds ============================== */
+.feeds{
+    width: 100%;
+    border-right: 1px solid var(--border-lines-grey);
+    border-left: 1px solid var(--border-lines-grey);
+}
+
+.feed{
+    display: flex;
+    align-items: flex-start;
+    padding: 1rem 1.4rem;
+    border-bottom: 1px solid var(--border-lines-grey);
+}
+
+.feed-profile-pic{
+    margin-right: 1rem;
+}
+
+.feed-profile-pic img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.feed-profile-name{
+    color: var(--white-text-color);
+    display: flex;
+    font-weight: 600;
+    cursor: pointer;
+    align-items: center;
+}
+
+.feed-profile-name-mobile{
+    display: none;
+}
+
+.feed-profile-name span{
+    margin: 0 0.3rem;
+    font-size: 1rem;
+}
+
+.feed-content-text{
+    color: var(--white-text-color);
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+}
+
+.username{
+    color: var(--faint-dark-text);
+}
+
+.feed-img img{
+    width: 500px;
+    border-radius: 20px;
+    border: var(--border-lines-grey);
+}
+
+/* ------------------------- hash-tags --------------------------- */
+.hash-tags{
+    display: flex;
+    align-items: center;
+    color: #1D9BF0;
+    margin: 0.7rem 0;
+    cursor: pointer;
+}
+
+
+/* ----------------------------------------- reaction ---------------------------------- */
+.feed-reactions{
+    display: flex;
+    align-items: center;
+    margin: 0.7rem 0 0 0;
+    justify-content: space-between;
+}
+
+.reaction{
+    color: var(--faint-dark-text);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+
+.reaction p{
+    font-size: 0.9rem;
+}
+
+.reaction span{
+    margin-right: 0.8rem;
+    font-size: 1.3rem;
+}
+
+.reaction-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.twitter-color:hover{
+    color: #1D9BF0;
+}
+
+.twitter-green:hover{
+    color: rgb(0, 156, 60);
+}
+
+.twitter-love-red:hover{
+    color: #ac001d;
+}
+
+
+/* =============================== RIGHT =============================*/
+.right{
+    flex-basis: 35%;
+    padding: 1.4rem 2rem 1.4rem 2.5rem;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+
+.right::-webkit-scrollbar{
+    overflow: hidden;
+}
+
+.search-input{
+    display: flex;
+    align-items: center;
+    background: var(--grey-background);
+    padding: 0.5rem;
+    border-radius: 50px;
+}
+
+.search-input input{
+    height: 2rem;
+    background: var(--grey-background);
+    outline: none;
+    border: none;
+    width: 100%;
+    font-size: 1.2rem;
+    color: var(--white-text-color) ;
+}
+
+.search-input input::placeholder{
+    font-size: 1rem;
+}
+
+.search-input span{
+    color: var(--white-text-color);
+    background: transparent;
+    margin: 0 1rem;
+    font-weight: lighter;
+}
+
+/* ================================= Tweets ============================ */
+.trends{
+    line-height: 3rem;
+    background: var(--grey-background);
+    padding: 0.5rem;
+    border-radius: 20px;
+    margin-top: 1rem;
+}
+
+.trend-lists{
+    margin-top: 1rem;
+}
+
+.trends-head{
+    background: var(--grey-background);
+    margin: 0 1rem;
+}
+
+.trends-head h1{
+    color: var(--white-text-color);
+    font-size: 1.2rem;
+}
+
+.trend-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 1rem;
+    line-height: 1rem;
+    color: #696969;
+    font-size: 0.9rem;
+}
+
+.trend-list h1{
+    font-size: 1rem;
+    color: var(--white-text-color);
+    margin: 0.3rem 0;
+    font-family: sans-serif;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

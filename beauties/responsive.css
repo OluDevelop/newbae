@@ -1,0 +1,270 @@
+
+/*==========================RESPONSIVE SCREEN FOR SMALL LAPTOP 
+AND BIG TABLETS======================*/
+
+@media screen and (max-width: 1200px) {
+    .search-input input{
+        display: none;
+    }
+
+    .middle .post{
+        margin-right: 20px;
+    }
+
+    .middle{
+        padding: 0 0;
+    }
+    
+}
+
+
+/*==========================RESPONSIVE SCREEN TABLETS
+ and MOBILE PHONES======================*/
+
+ @media screen and (max-width: 900px) {
+    .registration-wrapper-mobile{
+        display: block;
+    }
+
+    .registration-wrapper{
+        display: none;
+    }
+    .user-profile-post-desktop{
+        display: none;
+    }
+
+     .nav-user-profile .profile-name{
+         display: none;
+     }
+
+     aside ul li h2{
+         display: none;
+     }
+
+     .middle{
+        flex-basis: auto;
+    }
+    .right{
+        display: none;
+    }
+
+    .middle .post{
+        margin-right: 0px;
+    }
+
+    .notifications{
+        padding-right: 0.2rem;
+        padding-left: 0.2rem;
+        width: 50%;
+    }
+
+    .friends-left-head-lists div p{
+        display: none;
+    }
+
+    .friends{
+        grid-template-columns: 10% 90%;
+    }
+
+    .friends-left-head h1{
+        display: none;
+    }
+
+    .friends-left-head-lists .hide{
+        display: none;
+    }
+
+    .user-profile-page{
+        display: block;
+    }
+
+    .desktop-user-profile-page{
+        display: none;
+    }
+
+    .user-profile-post{
+        display: block;
+    }
+}
+
+
+/*==========================RESPONSIVE SCREEN TABLETS
+ and MOBILE PHONES======================*/
+
+ @media screen and (max-width: 640px) {
+    .registration-wrapper-mobile{
+        display: block;
+    }
+    
+    .registration-wrapper{
+        display: none;
+    }
+
+    .user-profile-post-desktop{
+        display: none;
+    }
+     .user-profile-post{
+         display: block;
+     }
+     .desktop{
+         display: none;
+     }
+
+     .notifications{
+         display: none;
+     }
+
+    .post{
+        box-shadow: none;
+        border: solid 0.3px rgba(116, 116, 116, 0.24);
+        display: none;
+    }
+
+     .mobile-container{
+         display: block;
+     }
+
+     aside{
+        display: none;
+    }
+
+    .right{
+        display: none;
+    }
+
+    .middle .create-post{
+        margin-right: 0;
+    }
+
+    .actions-create-post .actions span{
+        font-size: 1.3rem;
+    }
+
+    .actions-create-post .actions h1{
+        font-size: 1.1rem;
+    }
+
+    .feed{
+        padding: 1rem 0.5rem;
+        margin-top: 0.6rem;
+        box-shadow: none;
+        border: solid 0.3px rgba(116, 116, 116, 0.24);
+    }
+
+    .new-post-head h1{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .newpost{
+        width: 95%;
+    }
+
+    .new-post-add .new-post-add-text h1{
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    
+    .new-post-add .new-post-span a{
+        margin: 0 0.3rem;
+    }
+
+    .mobile-menu{
+        display: block;
+    }
+
+    .mobile-notifications{
+        display: block;
+    }
+
+    .mobile-page-header{
+        display: flex;
+    }
+
+    .friends{
+        grid-template-columns: 100%;
+    }
+
+    .friends-left{
+        display: none;
+    }
+
+    .friends-right{
+        padding: 0;
+        padding-bottom: 3rem;
+    }
+
+    .friends-right-cards{
+        width: 10rem;
+        margin: 0 0.1rem 1.2rem 0;
+    }
+
+    .friends-right-head{
+        margin-left: 1rem;
+    }
+
+
+    .friends-right-cards-wall-photo img{
+        height: 4rem;
+    }
+    
+    .friends-right-cards-profile-photo{
+        width: 4rem;
+        margin-top: -1.5rem;
+    }
+    
+    .friends-right-cards-profile-photo img{
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    
+    .friends-right-cards-texts{
+        line-height: 1.2rem;
+        margin: 1rem 0;
+    }
+    
+    .friends-right-cards-texts h1{
+        font-size: 1rem;
+    }
+    
+    .friends-right-cards-texts p{
+        font-size: 0.7rem;
+    }
+    
+    .friends-card-btn{
+        width: 8rem;
+        height: 2rem;
+        border-radius: 20px;
+        background: transparent;
+        font-size: 1rem;
+        border: solid 1px var(--color-dark);
+        color: var(--color-dark);
+        cursor: pointer;
+        margin-top: 1rem;
+    }
+
+    .mobile-top-options{
+        display: flex;
+    }
+
+    .mobile-hide{
+        display: none;
+    }
+
+    .friends-right-mobile{
+        display: block;
+    }
+
+    .friends-right-confirm-pop-up{
+        width: 80%;
+    }
+
+    .user-profile-page{
+        display: block;
+    }
+
+    .desktop-user-profile-page{
+        display: none;
+    }
+    
+}

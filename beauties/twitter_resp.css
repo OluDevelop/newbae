@@ -1,0 +1,315 @@
+/* =========================================== Media Queries ========================================= */
+
+
+/* --------------------- Extral Small Devices, Phone Smaller than 600px ------------------------- */
+@media only screen and (max-width: 600px) {
+    aside{
+        display: none;
+    }
+
+    .right{
+        display: none;
+    }
+
+    .feed-profile-pic img{
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+    }
+
+    /* =============================== middle ============================*/
+    .middle{
+        flex-basis: 100%;
+        width: 100%;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        overflow-x:hidden;
+        overflow-y:auto;
+    }
+
+    .middle::-webkit-scrollbar{
+        display: none;
+    }
+
+    /* ============================= Feeds ============================== */
+    .feeds{
+        width: 100%;
+        border: none;
+    }
+
+    .feed{
+        padding: 0.5rem 0.8rem 0.5rem 0.5rem;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        border-bottom: 1px solid var(--border-lines-grey);
+    }
+
+    .feed-profile-pic{
+        margin-right: 0.5rem;
+    }
+
+    .feed-img img{
+        width: 100%;
+    }
+
+    .feed-profile-name{
+        display: none;
+    }
+
+    .feed-profile-name-mobile{
+        line-height: 1rem;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+
+    .fold{
+        display: flex;
+        align-items: center;
+        color: var(--white-text-color);
+    }
+
+    .fold span{
+        font-size: 0.9rem;
+        margin-left: 0.3rem;
+    }
+
+}
+
+
+
+/* --------------------- Small Devices, Portrait Tablets and large phones, 600px and above ------------------------- */
+@media only screen and (min-width: 600px) and (max-width: 768px){
+    /* ------------------------------ Aside -------------------------- */
+    aside{
+        padding: 1.4rem 0.8rem 1.4rem 0.8rem;
+        position: sticky;
+        top: 0;
+        flex-basis: 10%;
+        height: 100vh;
+        width: max-content;
+    }
+
+    .aside-lists{
+        line-height: 3.3rem;
+    }
+
+    .list{
+        margin: 0.7rem 0;
+    }
+
+    .logout{
+        display: flex;
+    }
+
+    .logout span{
+        color: var(--faint-dark-text);
+    }
+
+    .not-dot-container{
+        display: none;
+    }
+
+    .list span{
+        margin-right: 0;
+    }
+
+    .logo p{
+        display: none;
+    }
+
+    .list p{
+        display: none;
+    }
+
+    .btn{
+        display: none;
+    }
+
+    .profile-container-name{
+        display: none;
+    }
+
+    .profile-container{
+        width: max-content;
+        padding: 0;
+        background: none;
+    }
+
+    .profile-container span{
+        display: none;
+    }
+
+
+    /* ------------------------------ Middle -------------------------- */
+    .middle{
+        flex-basis: 100%;
+    }
+
+    .feed{
+       
+        padding: 0.5rem 0.7rem 0.5rem 0.9rem;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        border-bottom: 1px solid var(--border-lines-grey);
+    }
+
+    .right{
+        display: none;
+        flex-basis: 0;
+    }
+}
+
+
+/* --------------------- Medium devices (Landscape tablets, 768px and above) ------------------------- */
+@media only screen and (min-width: 768px) and (max-width: 992px){
+    /* ------------------------------ Aside -------------------------- */
+    aside{
+        padding: 1.4rem 0.8rem 1.4rem 0.8rem;
+        position: sticky;
+        top: 0;
+        flex-basis: 10%;
+        height: 100vh;
+        width: max-content;
+    }
+
+    .aside-lists{
+        line-height: 3.3rem;
+    }
+
+    .list{
+        margin: 0.7rem 0;
+    }
+
+    .logout{
+        display: flex;
+    }
+
+    .logout span{
+        color: var(--faint-dark-text);
+    }
+
+    .not-dot-container{
+        display: flex;
+    }
+
+    .list span{
+        margin-right: 0.5rem;
+    }
+
+    .logo p{
+        display: block;
+        color: var(--white-text-color);
+    }
+
+    .list p{
+        display: block;
+    }
+
+    .btn{
+        display: block;
+        width: 8rem;
+    }
+
+    .profile-container-name{
+        display: none;
+    }
+
+    .profile-container{
+        width: max-content;
+        padding: 0;
+        background: none;
+    }
+
+    .profile-container span{
+        display: none;
+    }
+
+    /* ------------------------------ Middle -------------------------- */
+    .middle{
+        flex-basis: 100%;
+    }
+
+    .feed{
+        padding: 0.5rem 0.9rem 0.5rem 0.9rem;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        border-bottom: 1px solid var(--border-lines-grey);
+    }
+
+    .right{
+        display: none;
+        flex-basis: 0;
+    }
+
+}
+
+
+
+
+/* --------------------- Large devices (Laptops / Desktops, 992px and above) ------------------------- */
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    aside{
+        padding: 1.4rem 0.8rem 1.4rem 0.8rem;
+        position: sticky;
+        top: 0;
+        flex-basis: 10%;
+        height: 100vh;
+        width: max-content;
+    }
+
+    .not-dot-container{
+        display: none;
+    }
+
+    .middle{
+        flex-basis: 70%;
+    }
+
+    .list{
+        margin: 0.8rem 0;
+    }
+    
+    .list p{
+        display: none;
+    }
+
+    .logo p{
+        display: none;
+    }
+
+    .btn{
+        display: none;
+    }
+
+    .right{
+        display: block;
+        flex-basis: 36%;
+        padding: 1.4rem 0.7rem 1.4rem 1.4rem;
+    }
+
+    .profile-container-name{
+        display: none;
+    }
+
+    .profile-container{
+        width: max-content;
+        padding: 0;
+        background: none;
+    }
+
+    .profile-container span{
+        display: none;
+    }
+}
+
+
+
+
+/* --------------------- Extral Large devices (Large Laptops and Desktops, 1200px and above) ------------------------- */
+@media only screen and (min-width: 1200px){
+    
+}

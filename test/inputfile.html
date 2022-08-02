@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+
+        .custom__form input {
+            opacity: 0;
+            height: 0;
+        }
+
+        .custom__image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .custom__image-container label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 150%;
+            cursor: pointer;
+            width: 100px;
+            height: 100px;
+            border: solid 1px black;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+
+        .custom__image-container img {
+            width: 100px;
+            height: 100px;
+            border: solid 1px black;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <form class="custom__form">
+        <p>Add image</p>
+        <div class="custom__image-container">
+          <label id="add-img-label" for="add-single-img">+</label>
+          <input type="file" id="add-single-img" accept="image/jpeg"/>
+        </div>
+        <input type="file" id="image-input" name="photos" value="ssd" accept="image/jpeg" multiple />
+        <br />
+        <div class="form__controls"><button type="submit">Submit</button></div>
+      </form>
+
+
+      <script>
+        const imgInputHelper = document.getElementById("add-single-img");
+        const imgInputHelperLabel = document.getElementById("add-img-label");
+        const imgContainer = document.querySelector(".custom__image-container");
+        const imgFiles = [];
+
+
+
+        const addImgHandler = () => {
+        const file = imgInputHelper.files[0];
+        if (!file) return;
+        // Generate img preview
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = () => {
+            const newImg = document.createElement("img");
+            newImg.src = reader.result;
+            imgContainer.insertBefore(newImg, imgInputHelperLabel);
+        };
+        // Store img file
+        imgFiles.push(file);
+        // Reset image input
+        imgInputHelper.value = "";
+        return;
+        };
+        imgInputHelper.addEventListener("change", addImgHandler);
+
+
+        const getImgFileList = (imgFiles) => {
+        const imgFilesHelper = new DataTransfer();
+        imgFiles.forEach((imgFile) => imgFilesHelper.items.add(imgFile));
+        return imgFilesHelper.files;
+        };
+      </script>
+
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PREVIEW</title>
+
+    <style>
+        body{
+            margin: 0px;
+            height: 100vh;
+            background: #1283da;
+        }
+
+        .center{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form-input{
+            width: 350px;
+            padding: 20px;
+            background: #fff;
+            box-shadow: -3px -3px 7px rgba(94, 104, 121, 0.377),
+                        3px 3px 7px rgba(94, 104, 121, 0.377);
+        }
+
+        .form-input img{
+            width: 100%;
+            display: none;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+
+        .form-input input {
+            display: none;
+        }
+
+        .form-input label{
+            display: block;
+            width: 45%;
+            height: 45px;
+            margin-left: 25%;
+            line-height: 50px;
+            text-align: center;
+            background: #1172c2;
+            color: #fff;
+            font-size: 15px;
+            font-family: "Open Sans", sans-serif;
+            text-transform: uppercase;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+
+    <div class="center">
+        <div class="form-input">
+            <div class="preview">
+                <img id="files-ip-1-preview">
+            </div>
+
+            <label for="file-ip-1">Upload Image</label>
+            <input type="file" id="file-ip-1" accept="image/*" onchange="showPreview(event);">
+        </div>
+    </div>
+
+
+<script>
+    
+    function showPreview(event) {
+        if(event.target.files.length > 0){
+            var src = URL.createObjectURL(event.target.files[0]);
+            var preview = document.getElementById("files-ip-1-preview");
+            preview.src = src;
+            preview.style.display = "block";
+        }
+    }
+
+</script>
+
+</body>
+</html>

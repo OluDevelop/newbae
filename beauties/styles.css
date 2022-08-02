@@ -1,0 +1,3674 @@
+/*=============IMPORT GOOGLE FONT===============*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Red+Hat+Display:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+/*=================Color and Border Variables=================*/
+
+.dark-mode-color{
+    /*===============Colors=================*/
+    --color-background: #F0F2F5;
+    --color-background-white: #fff;
+    --color-text-white: #fff;
+    --color-primary-blue: #1D9BF0;
+    --color-primary-blue-dark: #143e70;
+    --color-primary-blue-dark-share-btn: #143e70;
+    --color-primary-red: #F3425F;
+    --color-danger: #b22341;
+    --color-success: #31A24C;
+    --color-warning: #F7B928;
+    --color-light-dark: #84858A;
+    --color-dark: #2C2D2D;
+    --color-input: #F0F2F5;
+    --color-hover: #F0F2F5;
+    --color-icon-border: #E4E6EB;
+    --color-icon : #050505;
+    --color-icon-light : #65676B;
+    --hover : #e2e2e2;
+    --flex-color-bg: rgba(238, 238, 238, 0.774);
+    --color-unread: #2E89FF;
+    --color-read: grey;
+    --color-primary-blue-dark-new: #e7e7e7;
+    --post_p_color: black;
+    --border-night: solid 0.3px rgba(116, 116, 116, 0.24);
+
+}
+
+
+:root{
+    --color-background : #18191A;
+    --color-light-dark: #fff;
+    --color-input: #2C2D2D;
+    --color-background-white: #242526;
+    --box-shadow: 0px 0px 1px white;
+    --color-icon-border: #677db6;
+    --color-icon-light : #D9DBE0;
+    --color-dark: #D9DBE0;   
+    --color-icon : #ffffff;
+    --hover: #677db6;
+    --color-hover: #677db6;
+    --flex-color-bg: rgba(56, 56, 56, 0.671);
+    --color-primary-blue-dark-share-btn: var(--color-primary-blue);
+    --color-primary-blue-dark-new: #143e70;
+    --post_p_color: rgb(241, 241, 241);
+    --border-night: 1px solid rgb(104, 104, 104);
+    --color-success: #31A24C;
+    --color-primary-blue-dark: #143e70;
+
+
+
+    /*=============Borders, Padding=================*/
+    --border-radius: 2rem;
+    --border-radius-20px: 20px;
+    --card-border-radius: 1rem;
+    --btn-padding: 0.6rem 2rem;
+    --search-padding: 0.6rem 1rem;
+    --card-padding: 1rem;
+
+    /*==============POSITIONS=================*/
+    --sticky-top-left: 5.4rem;
+    --sticky-top-right: -18rem;
+
+    /*==================BOX-SHADOW===============*/
+    --box-shadow: 0px 1px 10px rgb(218, 218, 218);
+}
+
+
+/*========REMOVE ALL==========*/
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background: var(--color-background);
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-dark);
+    overflow-x: hidden;
+    transition: background 0.3s;
+}
+
+a{
+    color: var(--color-icon-light);
+}
+
+/*=============================================GENERAL STYLES HERE=====================================*/
+
+.container{
+    padding: 0.4rem 2rem;
+}
+
+.rounded-photo{
+    height: 2.2rem;
+}
+
+.rounded-photo img{
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    border: solid var(--color-dark) 2px;
+    object-fit: cover;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+hr{
+    border: solid rgb(207, 207, 207) 0.1px;
+}
+
+
+/*========Nav Icons==========*/
+.nav-right ul li span{
+    font-size: 1.6rem;
+    padding: 0.5rem;
+    background: var(--color-icon-border);
+    border-radius: 50%;
+    margin-left: 1.5rem;
+    cursor: pointer;
+}
+
+.nav-center ul li span{
+    font-size: 2rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all ease 300ms;
+    margin-left: 2rem;
+}
+
+.nav-center ul li:first-child span{
+    margin-left: 0;
+}
+
+.nav-center ul li span:hover{
+    background: var(--color-icon-border);
+}
+
+.online{
+    position: relative;
+}
+
+.online::after{
+    content: '';
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    border: 2px white solid;
+    border-radius: 50%;
+    background: var(--color-success);
+    top: 0;
+    right: 0;
+}
+
+/*=============================================NAV STYLE HERE===========================================*/
+
+nav{
+    border: var(--border-night);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+nav .container{
+    background: var(--color-background-white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*=============Nav Left===============*/
+.nav-left{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 2.7rem;
+    border-radius: 0%;
+    aspect-ratio: 0;
+}
+
+.search-input{
+    display: flex;
+    align-items: center;
+    background: var(--color-input);
+    padding: 0.3rem 1rem;
+    border-radius: var(--border-radius-20px);
+    margin-left: 1rem;
+}
+
+.search-input input{
+    font-size: 1rem;
+    background: transparent;
+}
+
+.search-input input::placeholder{
+    color: var(--color-icon);
+}
+
+.search-input span{
+    margin-right: 0.3rem;
+}
+
+
+/*===========Nav Center===============*/
+.nav-center ul li{
+    display: inline-block;
+}
+
+/*===========Nav Right===============*/
+.nav-right{
+    display: flex;
+    align-items: center;
+}
+
+.nav-user-profile{
+    display: flex;
+    align-items: center;
+    padding: 0.3rem 0.6rem;
+    border-radius: var(--border-radius-20px);
+    transition: all ease 300ms;
+    cursor: pointer;
+}
+
+.nav-user-profile:hover{
+    background: var(--color-hover);
+}
+
+.nav-user-profile .profile-name h1{
+    font-size: 1.1rem;
+    margin-left: 0.3rem;
+    font-weight: 400;
+    color: var(--color-icon-light);
+}
+
+.nav-right ul li{
+    display: inline-block;
+}
+
+.profile-name{
+    line-height: 1rem
+}
+
+
+
+
+
+
+/*==================================================Mobile Style Nav=====================================================*/
+.mobile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile div:nth-child(3) a span{
+    font-size: 2.5rem;
+    color: #0178D6;
+}
+
+.mobile span{
+    font-size: 1.7rem;
+}
+
+.mobile-container{
+    display: none;
+    align-items: center;
+    padding: 0.7rem 1rem 0.4rem 1rem;
+    background: var(--color-background-white);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%; /* Full width */
+    overflow: hidden;
+    z-index: 1000; /* Sit on top */
+}
+
+
+/*===========================================PAGE CONTAINER STLYE========================================*/
+
+main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*---------------- ASIDE ------------------*/
+
+aside{
+    padding: 1rem 1rem;
+    flex-basis: 29%;
+    width: 100%;
+    position: sticky;
+    top: 70px;
+    align-self: flex-start;
+}
+
+aside ul li{
+    padding: 0.7rem 0.5rem;
+    border-radius: 5px;
+    transition: all ease 300ms;
+}
+
+aside ul li:hover{
+    background-color: var(--hover);
+}
+
+aside h2{
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.aside-user-profile{
+    display: flex;
+    align-items: center;
+}
+
+.aside-user-profile .rounded-photo{
+    margin-right: 0.5rem;
+    width: 2rem;
+}
+
+aside ul li a{
+    display: flex;
+    align-items: center;
+}
+
+aside ul li a span{
+    margin-right: 0.7rem;
+}
+
+aside .aside-span{
+    font-size: 1.7rem;
+}
+
+aside hr{
+    margin: 15px 0;
+}
+
+aside ul li:last-child{
+    margin-top: 4rem;
+    padding: 0;
+}
+
+aside ul li .a{
+    color: var(--color-text-white);
+    display: flex;
+    background: #143e70;
+    width: 100%;
+    padding: 0.7rem 0.5rem;
+    border-radius: 10px;
+}
+
+aside ul li .a span{
+    color: var(--color-text-white);
+}
+
+
+
+
+
+
+/*----------------=================MIDDLE=================------------------*/
+.middle{
+    flex-basis: 40%;
+    width: 100%;
+    margin-top: 0.3rem;
+}
+
+.for-space{
+    margin-top: 3rem;
+    width: 10px;
+    height: 60px;
+}
+
+.post{
+    background: var(--color-background-white);
+    padding: 1rem 1rem;
+    border-radius: 10px;
+    border: var(--border-night);
+}
+
+.post hr{
+    margin: 1rem 0;
+    width: 100%;
+}
+
+.middle .create-post{
+    display: flex;
+}
+
+.create-post .rounded-photo{
+    width: 2.9rem;
+    margin-right: 0.6rem;
+}
+
+/* ====================== Auto Preview of Images =======================*/
+.custom_image_container{
+    width: 100%;
+    height: 2rem;
+}
+
+.custom__image-container img {
+    width: 100px;
+    height: 100px;
+    border: solid 1px black;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+
+/* ============================== New Preview Images ============================= */
+.preview_images{
+    border: none;
+    outline: 0;
+    overflow: auto;
+}
+
+#clearImg{
+    display: none;
+}
+
+.preview_images_desk{
+    border: none;
+    outline: 0;
+    overflow: auto;
+}
+
+.preview_images_desk img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: none;
+    outline: none;
+    display: none;
+    border-radius: 5px;
+}
+
+.preview_images img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: none;
+    outline: none;
+    display: none;
+    border-radius: 5px;
+}
+
+
+
+.input-btn .btn{
+    width: 5rem;
+    height: 2rem;
+    background: var(--color-primary-blue-dark);
+    margin-right: 1rem;
+    color: var(--color-text-white);
+    border-radius: var(--border-radius-20px);
+    cursor: pointer;
+}
+
+.input-btn{
+    display: flex;
+    background: var(--color-input);
+    width: 100%;
+    border-radius: var(--border-radius-20px);
+    align-items: center;
+}
+
+.input-btn input{
+    width: 100%;
+   padding: 1rem;
+    font-size: 1rem;
+    padding: 0 1rem;
+    background: transparent;
+    cursor: pointer;
+}
+
+.input-btn input::placeholder{
+    color: var(--color-icon);
+}
+
+.actions-create-post{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.actions-create-post .actions{
+    display: flex;
+    align-items: center;
+}
+
+.actions-create-post .actions span{
+    font-size: 1.6rem;
+    color: var(--color-primary-red);
+}
+
+.actions-create-post a:last-child span{
+    color: var(--color-warning);
+}
+
+.actions-create-post a:nth-child(2) span{
+    color: var(--color-success);
+}
+
+.actions-create-post .actions h1{
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    font-weight: 400;
+    color: var(--color-icon-light);
+}
+
+
+
+
+/*--------------------------FEEDS---------------------------*/
+.feed{
+    margin-top: 0.7rem;
+    background: var(--color-background-white);
+    padding: 1rem 1rem;
+    border-radius: 10px;
+    border: var(--border-night);
+}
+
+.feedRepost{
+    margin-top: 0.7rem;
+    background: var(--color-background-white);
+    padding: 1rem 1rem;
+    border-radius: 10px;
+    border: var(--border-night);
+}
+
+.feed-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.feed-user{
+    display: flex;
+    align-items: center;
+}
+
+.feed-user-name{
+    line-height: 0.9rem;
+    margin-left: 0.5rem;
+}
+
+.feed-user-name p{
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--color-icon);
+}
+
+.feed-text{
+    word-wrap: break-word;
+    margin: 1rem 0;
+}
+
+.feed-text p{
+    font-size: 0.9rem;
+    line-height: 1rem;
+    color: var(--post_p_color);
+}
+
+.feed-span{
+    display: flex;
+    align-items: center;
+}
+
+.feed-span p{
+    margin-left: 0.3rem;
+}
+
+.feed-img img{
+    border-radius: var(--border-radius-20px);
+    object-fit: cover;
+    width: 100%;
+}
+
+.feed-actions{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.feed-actions span .save-icon{
+    color: rebeccapurple;
+}
+
+.feed-action{
+    display: flex;
+    align-items: center;
+}
+
+.feed-actions .feed-action span{
+    font-size: 1.6rem;
+}
+
+.feed-action .feed-span{
+    margin-right: 1rem;
+}
+
+.feed-actions span{
+    font-size: 1.8rem;
+}
+
+
+.feed-action a, span{
+    color: var(--color-dark);
+}
+
+.feed-actions span:last-child{
+    color: var(--color-primary-blue-dark-share-btn);
+}
+
+.liked-by{
+    display: flex;
+    align-items: center;
+}
+
+.liked-by p{
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+}
+
+
+.liked-by img{
+    width: 1rem;
+    border-radius: 50%;
+}
+
+.feed-span_span_color_change{
+    color: tomato;
+}
+
+
+
+/*---------------- RIGHT ------------------*/
+.right{
+    padding: 1rem 1rem;
+    flex-basis: 30%;
+    position: sticky;
+    top: 70px;
+    align-self: flex-start;
+    height: 100vh;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+
+.right::-webkit-scrollbar{
+    overflow: hidden;
+}
+
+
+.active-contacts{
+    margin-top: 0.5rem;
+}
+
+.active-contacts .active-users{
+    padding: 0.5rem 0.3rem;
+    transition: all ease 300ms;
+    border-radius: 5px;
+}
+
+.active-contacts .active-users:hover{
+    background: var(--hover);
+}
+
+.right .right-heading h1{
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--color-light-dark);
+}
+
+.aside-user-profile .profile-name h2{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.right-heading{
+    display: flex;
+    color: var(--color-icon-light);
+    align-items: center;
+}
+
+.right-heading span{
+    color: var(--color-danger);
+}
+
+.right-heading .aside-span{
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+.all-notification{
+    margin: 1rem 0;
+}
+
+.right-notication{
+    display: flex;
+    align-items: center;
+    background: var(--color-background-white);
+    padding: 0.7rem 0.6rem;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.right-notication .notification-details{
+    display: block;
+    margin-left: 1rem;
+}
+
+.notification-details h2{
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: var(--color-icon);
+    line-height: 1rem;
+}
+
+.notification-details p{
+    font-size: 0.8rem;
+}
+
+.notification-details small{
+    font-size: 0.7rem;
+    color: var(--color-light-dark);
+}
+
+.notification-photo{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.notification-photo img{
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: cover;
+}
+
+.friends_accept_btn{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.friends_accept_btn button{
+    width: 4rem;
+    background: transparent;
+    border: 1px #555 solid;
+    border-radius: 10px;
+    margin-bottom: 6px;
+    color: var(--color-dark);
+    height: 1.5rem;
+}
+
+
+
+/*======================================POP UP MENU===================================*/
+
+
+/*-----------------SETTINGS MENU---------------------*/
+.settings-menu{
+    position: absolute;
+    width: 90%;
+    max-width: 350px;
+    background: var(--color-background-white);
+    box-shadow: var(--box-shadow);
+    border-radius: 4px;
+    overflow: hidden;
+    top: 70px;
+    right: 2%;
+    max-height: 0;
+    transition: max-height 0.3s;
+}
+
+.settings-menu-height{
+    max-height: 450px;
+}
+
+.icons-menu span{
+    font-size: 1.7rem;
+    margin-right: 0.7rem;
+}
+
+
+.settings-menu-inner{
+    padding: var(--border-radius-20px);
+}
+
+.settings-menu-inner hr{
+    border: 0;
+    height: 1px;
+    background-color: var(--color-light-dark);
+    margin: 1rem 0;
+}
+
+.setting-links{
+    display: flex;
+    padding: 0.6rem 0.5rem;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.setting-links:hover{
+    background: var(--hover);
+}
+
+.links-text{
+    display: flex;
+    align-items: center;
+    margin-left: 0.7rem;
+    justify-content: space-between;
+}
+
+.setting-links .links-text{
+    flex: 1;
+}
+
+.links-text h2{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+
+
+/*------------------------------------- MOBILE MENU POPUP---------------------------------*/
+.mobile-menu{
+    background: var(--color-background-white);
+    padding: 0;
+    max-height: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    bottom: 0;
+    width: 100%; /* Full width */
+    overflow: auto; /* Enable scroll if needed */
+    display: none;
+    border-top: 1px rgb(105, 105, 105) solid;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: max-height 0.1s;
+}
+
+.mobile-menu-height{
+    max-height: 100%;
+    padding: 1rem 1rem;
+}
+
+.mobile-menu-close-btn{
+    text-align: center;
+    margin-bottom: 0.7rem;
+}
+
+.mobile-menu-close-btn span{
+    color: var(--color-dark);
+    font-size: 1.7rem;
+}
+
+.mobile-menu div{
+    margin-bottom: 0.5rem;
+}
+
+.mobile-menu div a{
+    margin-bottom: 1rem;
+}
+
+.mobile-menu-profile{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.mobile-menu-profile-photo{
+    width: 2rem;
+    margin-right: 0.5rem;
+}
+
+.mobile-menu-profile-photo img{
+    height: 2rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid rgb(99, 99, 99);
+}
+
+.mobile-menu div a{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.8rem;
+}
+
+.mobile-menu div a span{
+    font-size: 1.5rem;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.mobile-menu .links-text{
+    margin-bottom: 2rem;
+}
+
+.flex-links{
+    display: flex;
+}
+
+.flex-links span{
+    margin-right: 0.5rem;
+}
+
+.mobile-menu .links-text{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.subInput{
+    background: transparent;
+}
+
+
+
+
+/*------================================== Confirm Unfollow Pop up ==========================------------*/
+.friends-right-pop-up{
+    width: 0;
+    height: 0;
+    padding: 0;
+    left: 0;
+    margin: 0 auto;
+    z-index: 2000;
+    position: fixed; /* Stay in place */
+    bottom: 0;
+}
+
+.friends-right-pop-up-click{
+    bottom: 20rem;
+    width: 100%;
+    height: 30vh;
+    padding: 0.5rem;
+}
+
+.friends-right-confirm-pop-up{
+    margin: 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    width: 40%;
+    background: var(--color-background-white);
+    border-radius: 5px;
+    padding: 1rem 0.5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.friends-right-pop-up h1{
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--color-dark);
+    font-weight: 400;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 0.5rem;
+}
+
+.confirm-btn{
+    width: 6rem;
+    height: 2rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    background: #677DB6;
+    color: #fff;
+}
+
+.color-danger{
+    background: #555;
+    color: #fff;
+}
+
+
+/*================= switch_btw_friends ======================*/
+.switch_btw_friends{
+    display: none;
+}
+
+.switch_btw_friends label{
+    width: 9rem;
+    border: 1px var(--color-dark) solid;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+
+
+/*--------------------------------- CREATE POST FOR DESKTOP --------------------------------*/
+.flex{
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: var(--flex-color-bg); /* Fallback color */
+  padding-top: 60px;
+  display: none;
+}
+
+.flex-display{
+    display: block;
+}
+
+.newpost{
+    margin: 1% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    width: 40%;
+    background: var(--color-background-white);
+    border-radius: 10px;
+    padding: 0.7rem 1rem;
+}
+
+.new-post-head{
+    display: flex;
+    align-items: center;
+    color: var(--color-dark);
+    justify-content: space-between;
+}
+
+.new-post-head h1{
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.new-post-head span{
+    text-align: right;
+}
+
+.newpost hr{
+    margin: 0.7rem 0;
+}
+
+.newpost .feed-head{
+    margin-bottom: 1rem;
+}
+
+.new-post-input textarea{
+    width: 100%;
+    height: 90px;
+    overflow: hidden;
+    font-size: 1.1rem;
+    font-family: "Poppins", sans-serif;
+    background: var(--color-input);
+    padding: 0.2rem 0.2rem;
+    color: var(--color-dark);
+}
+
+.new-post-input textarea::placeholder{
+    font-size: 1.1rem;
+    font-family: "Poppins", sans-serif;
+}
+
+.feed-user-name select{
+    padding: 0.2rem 0.6rem;
+    margin-top: 0.2rem;
+    border-radius: 5px;
+    background: var(--hover);
+    cursor: pointer;
+}
+
+.newpost-img{
+    width: 2.9rem;
+}
+
+
+.new-post-add{
+    border: solid 1px rgb(179, 179, 179);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+
+.new-post-add .new-post-add-text h1{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.new-post-add .new-post-span a{
+    margin: 0 0.8rem;
+}
+
+.new-post-span a:first-child span{
+    color: var(--color-warning);
+}
+
+.new-post-span a:nth-child(2) span{
+    color: var(--color-primary-red);
+}
+
+.new-post-span a:nth-child(3) span{
+    color: var(--color-success);
+}
+
+.new-post-head span{
+    cursor: pointer;
+    font-size: 1.8rem;
+    padding: 00.5rem;
+    background: var(--hover);
+    border-radius: 50%;
+    color: var(--color-light-dark);
+}
+
+.post-btn{
+    width: 100%;
+    height: 40px;
+    background: var(--color-primary-blue-dark);
+    color: var(--color-text-white);
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.mobile-menu{
+    display: none;
+}
+
+
+/*--------------------------------- CREATE POST FOR Mobile --------------------------------*/
+.mobile-create-post{
+    padding: 0rem 1rem;
+    background: var(--color-background-white);
+    height: 100vh;
+    width: 100%;
+    overflow: auto; /* Enable scroll if needed */    
+}
+
+.mobile-create-post-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.7rem 0;
+    border-bottom: 0.3px rgb(185, 185, 185) solid;
+}
+
+.mobile-create-post-head div{
+    display: flex;
+    align-items: center;
+}
+
+.mobile-create-post-head div h1{
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.mobile-create-post-head div span{
+    font-size: 1.8rem;
+    margin-right: 0.7rem;
+    margin-bottom: 0.5rem;
+}
+
+.mobile-create-post-head .posts-btn{
+    width: 5rem;
+    font-size: 1.2rem;
+    height: 2rem;
+    background: transparent;
+    color: var(--color-primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+
+.mobile-create-post-profile-name select{
+    padding: 0.1rem 0.3rem;
+    font-size: 0.8rem;
+    border-radius: 20px;
+    background: transparent;
+    border: 1px var(--color-dark) solid;
+    color: var(--color-dark);
+}
+
+.mobile-create-post-profile{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.mobile-create-post-profile-img{
+    width: 2.9rem;
+    margin-right: 0.6rem;
+}
+
+.mobile-create-post-profile-img img{
+    height: 2.9rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.mobile-create-post-profile-name{
+    line-height: 1.5rem;
+}
+
+.mobile-create-post-profile-name h1{
+    font-size: 1.2rem;
+}
+
+.mobile-create-post textarea{
+    height: 180px;
+    width: 100%;
+    background: transparent;
+    padding: 1rem 0rem;
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    font-family: "Poppins", sans-serif;
+    color: var(--color-dark);
+    line-height: 1.1rem;
+}
+
+.mobile-create-post-bottom{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 1rem;
+    width: 100%;
+    background: var(--color-primary-blue-dark-new);
+}
+
+.mobile-create-post-bottom div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobile-create-post-bottom div span{
+    margin-right: 2.5rem;
+    font-size: 1.7rem;
+    background: transparent;
+}
+
+.mobile-create-post-bottom span{
+    font-size: 1.7rem;
+    background: transparent;
+}
+
+
+
+
+/*--------------------------------- Mobile Header Page --------------------------------*/
+.mobile-page-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0.7rem;
+    background:var(--color-background-white);
+    display: none;
+}
+
+.mobile-page-header-img{
+    width: 2.5rem;
+}
+
+.mobile-page-header-img img{
+    border-radius: 50%;
+    object-fit: cover;
+    height: 2.5rem;
+    border: 1px var(--color-dark) solid;
+}
+
+.mobile-page-header-search{
+    display: flex;
+    align-items: center;
+    background: #677db6;
+    padding: 0.2rem 0.6rem;
+    border-radius: 5px;
+}
+
+.mobile-page-header-search span{
+    margin-right: 0.5rem;
+    color: white;
+}
+
+.mobile-page-header-search input{
+    background: transparent;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.mobile-page-header-search input::placeholder{
+    color: #fff;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+
+
+
+/*-------------------------------------- Desktop Notification Pop Up ---------------------------------------*/
+.notifications{
+    padding: 0 2rem 0.5rem 2rem;
+    max-height: 85vh;
+    background: var(--color-background-white);
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    right: 7%;
+    bottom: 0;
+    width: 35%; /* Full width */
+    overflow: auto; /* Enable scroll if needed */
+    border: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: var(--box-shadow);
+    display: none;
+}
+
+.notifications::-webkit-scrollbar{
+    overflow: hidden;
+}
+
+.notification-profile{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.notifications h1{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.notification-details{
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+
+.notification-head{
+    text-align: center;
+}
+
+.notification-head span{
+    cursor: pointer;
+}
+
+.notification-profile-photo{
+    width: 2.5rem;
+    margin-right: 0.5rem;
+    height: 2.5rem;
+}
+
+.notification-profile-photo img{
+    border-radius: 50%;
+    border: 1px solid white;
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: cover;
+}
+
+.notification-profile-name{
+    line-height: 1rem;
+}
+
+.notification-profile-name h1{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-dark);
+}
+
+.notification-profile-name p{
+    font-size: 0.8rem;
+    color: #677DB6;
+}
+
+.acceptBtn{
+    width: 5rem;
+    background: var(--color-success);
+    color: white;
+    height: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.declineBtn{
+    width: 5rem;
+    background: var(--color-danger);
+    color: white;
+    height: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.notification-profile .active-shape span{
+    color: var(--color-unread);
+    font-size: 1rem;
+}
+
+.notification-profile .active-shape span.read{
+    color: var(--color-read);
+}
+
+.notification-head{
+    position: sticky;
+    top: 0;
+    background: var(--color-background-white);
+    z-index: 10;
+    padding: 0.5rem 0;
+}
+
+
+
+/*------------------------------------MOBILE NOTIFICATION--------------------------*/
+.mobile-notifications{
+    padding: 1rem 1rem;
+    /* display: none; */
+}
+
+.mobile-notifications .notification-h1{
+    font-size: 1.5rem;
+}
+
+
+/*---------------------------------------Friends Styles---------------------------------------*/
+
+.friends{
+    background: var(--color-background);
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+
+/*--------------------- Left Style -----------------------*/
+
+.friends-left{
+    background: var(--color-background-white);
+    height: 100vh;
+    padding: 0.5rem 0.5rem;
+    box-shadow: var(--box-shadow);
+    box-sizing: border-box;
+    position: sticky;
+    top: 63px;
+    left: 0;
+}
+
+.friends-left-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0.5rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+    background-color: rgba(204, 204, 204, 0.171);
+}
+
+.friends-left-head h1{
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: var(--color-dark);
+}
+
+.friends-left-head-profile-img{
+    width: 2.5rem;
+}
+
+.friends-left-head-profile-img img{
+    border-radius: 50%;
+}
+
+.friends-left-head-lists{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.3rem 0.5rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: all ease 500ms;
+}
+
+.friends-left .active{
+    background: var(--color-hover);
+}
+
+.friends-left-head-lists:hover{
+    background: var(--color-hover);
+}
+
+.friends-left-head-lists div{
+    display: flex;
+    align-items: center;
+}
+
+.friends-left-head-lists div span{
+    font-size: 2rem;
+    border-radius: 50%;
+    background: var(--hover);
+    padding: 0.5rem;
+    margin-right: 1rem;
+}
+
+.friends-left-head-lists div p{
+    font-size: 1.3rem;
+}
+
+
+/*----------------------------- Right Style ---------------------------------*/
+.friends-right{
+    background: var(--color-background);
+    height: max-content;
+    padding: 0.5rem 1rem;
+}
+
+.friends-right-head{
+    margin: 0.7rem 0;
+}
+
+.friends-right-head h1{
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.friends-right-all-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.friends-right-cards{
+    padding: 0.5rem;
+    width: 14rem;
+    background: var(--color-background-white);
+    height: max-content;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 0.5rem 1.2rem 0;
+    box-shadow: var(--box-shadow);
+}
+
+.friends-right-cards-wall-photo{
+    width: 100%;
+}
+
+.friends-right-cards-wall-photo img{
+    border-radius: 5px;
+    width: 100%;
+    height: 6rem;
+    object-fit: cover;
+}
+
+.friends-right-cards-profile-photo{
+    width: 4rem;
+    margin-top: -1.5rem;
+}
+
+.friends-right-cards-profile-photo img{
+    border-radius: 50%;
+    height: 4rem;
+    object-fit: cover;
+}
+
+.friends-right-cards-texts{
+    line-height: 1.5rem;
+    margin: 1rem 0;
+}
+
+.friends-right-cards-texts h1{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.friends-right-cards-texts p{
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.friends-card-btn{
+    width: 8rem;
+    height: 2rem;
+    border-radius: 20px;
+    background: transparent;
+    font-size: 1rem;
+    border: solid 1px var(--color-dark);
+    color: var(--color-dark);
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+
+/*------------------ Mobile Top Options-----------------------*/
+.mobile-top-options{
+    display: flex;
+    max-width: 2rem;
+    margin-top: 1rem;
+    background: var(--color-background-white);
+    justify-content: space-between;
+    padding: 0.3rem 0;
+    align-items: center;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    position: fixed;
+    top: 35px;
+    right: 0;
+    z-index: 1000; /* Sit on top */
+    transition: max-height 0.9s;
+    box-shadow: var(--box-shadow);
+    display: none;
+} ok
+
+.mobile-top-options .active{
+    border-bottom: #0178D6 5px solid;
+}
+
+.mobile-top-options-close{
+    max-width: 15rem;
+    padding: 0.3rem 1rem;
+}
+
+.mobile-top-options span{
+    font-size: 1.8rem;
+    margin-right: 2rem;
+}
+
+.mobile-top-options .last{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
+/*-----------------------------friends-right-mobile-------------------------------*/
+.friends-right-mobile{
+    padding: 0.1 rem 0.5rem;
+    display: none;
+}
+
+.friends-right-lists{
+    display: flex;
+    background: var(--color-background-white);
+    padding: 0.5rem;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.friends-right-lists-group{
+    display: flex;
+    align-items: center;
+}
+
+.friends-right-lists-photo{
+    width: 4rem;
+    margin-right: 0.6rem;
+}
+
+.friends-right-lists-photo img{
+    height: 4rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.friends-right-lists-texts{
+    line-height: 1rem;
+}
+
+.friends-right-lists-texts p{
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.friends-right-lists .friends-card-btn{
+    margin: 0;
+    width: 6rem;
+}
+
+.friends-right-lists .msg-btn{
+    width: 5rem;
+    height: 1.3rem;
+    font-size: 0.9rem;
+    border: none;
+    outline: none;
+    background: var(--hover);
+    color: var(--color-dark);
+    box-shadow: var(--box-shadow);
+    margin-top: 0.2rem;
+
+}
+
+.friends-right-all-cards .msg-btn{
+    width: 5rem;
+    height: 1.3rem;
+    font-size: 0.9rem;
+    border: none;
+    outline: none;
+    background: var(--hover);
+    color: var(--color-dark);
+    box-shadow: var(--box-shadow);
+    margin-top: 0.2rem;
+    margin-top: 0.5rem;
+    border-radius: 20px;
+}
+
+
+/*---------------------------- Profile Style -------------------------------*/
+.user-profile-page{
+    display: none;
+    overflow: auto;
+    padding: 0 0 4rem 0;
+}
+
+.user-profile-head{
+    display: flex;
+    align-items: center;
+    background: var(--color-background-white);
+    padding: 0.5rem 0.7rem;
+    box-shadow: var(--box-shadow);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+}
+
+.user-profile-head div{
+    text-align: center;
+    width: 100%;
+
+}
+
+.user-profile-head div h1{
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.user-profile-head span{
+    font-size: 1.7rem;
+}
+
+.user-profile-profile-top{
+    margin-top: 3.3rem;
+}
+
+.user-profile-profile-top-photo{
+    width: 100%;
+}
+
+.user-profile-profile-top-photo img{
+    height: 8rem;
+    object-fit: cover;
+}
+
+.user-profile-profile-top-details{
+    padding: 0 0.7rem;
+}
+
+.user-profile-profile-top-details-photo{
+    display: flex;
+    justify-content: space-between;
+    width: 7rem;
+    height: 7rem;
+    margin-top: -4rem;
+    z-index: 2;
+}
+
+.user-profile-profile-top-details-top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-profile-profile-top-details-photo img{
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px var(--color-dark) solid;
+}
+
+.user-profile-profile-top-details-photo-icons{
+    display: flex;
+    margin-top: 0.5rem;
+    align-items: center;
+}
+
+.user-profile-profile-top-details-photo-icons span{
+    border-radius: 50%;
+    padding: 0.1rem;
+    border: solid var(--color-dark) 1px;
+}
+
+.profile-btn{
+    width: 6rem;
+    height: 1.8rem;
+    border-radius: 15px;
+    font-size: 1rem;
+    background: transparent;
+    color: var(--color-dark);
+    border: var(--color-dark) 1px solid;
+    margin-left: 0.7rem;
+}
+
+.profile-btn-follow{
+    width: 8rem;
+    height: 1.8rem;
+    border-radius: 15px;
+    font-size: 1rem;
+    background: transparent;
+    color: var(--color-dark);
+    border: var(--color-dark) 1px solid;
+    margin-left: 0.7rem;
+}
+
+.profile-btn-unfollow{
+    width: 7rem;
+    height: 1.8rem;
+    border-radius: 15px;
+    font-size: 1rem;
+    background: transparent;
+    color: var(--color-dark);
+    border: var(--color-dark) 1px solid;
+    margin-left: 0.7rem;
+}
+
+.user-name{
+    line-height: 1.5rem;
+    margin: 1rem 0;
+}
+
+.user-name h1{
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.user-bio{
+    word-wrap: break-word;
+}
+
+.user-bio p{
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.user-followers-info{
+    margin-top: 0.6rem;
+    display: block;
+    word-wrap: break-word;
+}
+
+.info-flex{
+    display: block;
+    line-height: 1.9rem;
+}
+
+.info-flex div{
+    display: flex;
+    align-items: center;
+}
+
+.info-flex span{
+    font-size: 1rem;
+    margin-right: 0.2rem;
+}
+
+.profile-msg-btn{
+    width: 100%;
+    height: 2rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    background: #677db6;
+    color: #fff;
+    margin: 0.5rem 0;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+/* ---------------------------- Pop Up For user-profile-page-action---------------------------*/
+.user-profile-page-action{
+    padding: 0;
+    background: var(--color-background-white);
+    line-height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-height: 0;
+    transition: max-height 3ms;
+}
+
+.user-profile-page-action-click{
+    max-height: max-content;
+    padding: 0.5rem 0.5rem 4rem 0.5rem;
+}
+
+.user-profile-action-icons{
+    display: flex;
+    align-items: center;
+}
+
+.user-profile-action-icons span{
+    color: rgb(75, 75, 75);
+    margin-right: 0.6rem;
+}
+
+.action-btn{
+    width: 100%;
+    height: 2rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    background: transparent;
+    color: #fff;
+    margin: 0.5rem 0;
+    font-weight: 400;
+}
+
+
+/*------------------------------------- User Profile Page For Desktop ------------------------------*/
+.desktop-user-profile-page{
+    padding: 0 6rem;
+}
+
+.desktop-user-profile-page-head-photo{
+    box-shadow: var(--box-shadow);
+    border-bottom-right-radius: 60px;
+}
+
+.desktop-user-profile-page-head-photo img{
+    height: 18rem;
+    object-fit: cover;
+    border-bottom-right-radius: 60px;
+}
+
+.desktop-user-profile-container{
+    padding: 0 4rem;
+}
+
+.desktop-user-profile-page-head-info{
+    margin-top: -5.5rem;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.desktop-user-profile-page-head-info-profile-pic{
+    width: 12rem;
+    border-radius: 50%;
+    margin-right: 2rem;
+    height: 12rem;
+}
+
+.desktop-user-profile-page-head-info-profile-pic img{
+    border-radius: 50%;
+    width: 12rem;
+    height: 12rem;
+    object-fit: cover;
+    border: 3px var(--color-dark) solid;
+}
+
+.desktop-user-profile-page-head-info-profile-icon{
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.desktop-user-profile-page-head-info-profile-icon .profile-btn{
+    width: 10rem;
+    height: 2.5rem;
+}
+
+.desktop-user-profile-page-head-user-info{
+    display: flex;
+}
+
+.desktop-user-profile-user-info-details{
+    margin-top: 6rem;
+    line-height: 1.6rem;
+}
+
+.desktop-user-profile-user-info-details h1{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+/*--------------------------------------------- Profile Contents ---------------------------------------*/
+.desktop-user-profile-container-flex{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.desktop-user-profile-container-flex-left{
+    flex-basis: 39%;
+    background: var(--color-background-white);
+    height: max-content;
+    width: 100%;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    overflow: auto;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 5rem;
+}
+
+.desktop-user-profile-container-flex-left-about{
+    padding: 0.3rem 0.5rem;
+    background: var(--hover);
+    margin: 1rem 0;
+    border-radius: 5px;
+}
+
+.desktop-user-profile-container-flex-left-about h1{
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.desktop-user-profile-container-flex-left .user-followers-info .info-flex{
+    line-height: 3rem;
+}
+
+.desktop-user-profile-container-flex-left .user-followers-info small{
+    font-size: 1.1rem;
+}
+
+.desktop-user-profile-container-flex-left .user-followers-info span{
+    font-size: 1.6rem;
+    margin-right: 1rem;
+}
+
+.desktop-user-profile-container-flex-right{
+    flex-basis: 59%;
+    background: var(--color-background-white);
+    height: max-content;
+    width: 100%;
+    padding: 0rem 2rem 1rem;
+    border-radius: 10px;
+    overflow: auto;
+    box-shadow: var(--box-shadow);
+}
+
+
+
+/*--------------------------------- Posts ------------------------------------*/
+.user-profile-post{
+    padding: 0 0 1rem 0;
+    display: none;
+    overflow: auto;
+    height: 90%;
+}
+
+.user-post-post-details{
+    padding: 0.5rem 0.6rem 1rem;
+    display: flex;
+    margin-top: 0.4rem;
+    border-bottom: 1px solid rgb(145, 145, 145);
+}
+
+.user-profile-page-comments .user-post-post-details:last-child{
+    border-bottom: none;
+    padding-bottom: 5rem;
+}
+
+.user-post-profile-photo{
+    flex-basis: 13%;
+    margin-right: 1rem;
+    height: 3.5rem;
+}
+
+.user-post-profile-photo img{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    border: solid var(--color-dark) 2px;
+    object-fit: cover;
+}
+
+.user-post-post-text{
+    flex-basis: 95%;
+    word-wrap: break-word;
+}
+
+.user-post-post-text h1{
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #677db6;
+}
+
+.user-post-content{
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+}
+
+.user-profile-page-actions{
+    padding: 0.2rem 0.6rem;
+}
+
+.user-profile-page-actions-comment-mobile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.3rem 0.3rem;
+    background: var(--color-background-white);
+    position: fixed;
+    bottom: 0;
+    border: #9c9c9c 1px solid;
+}
+
+.user-profile-page-actions-comment{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.3rem 0.3rem;
+    background: var(--color-background-white);
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+}
+
+.user-profile-page-actions-comment-photo{
+    width: 2rem;
+    margin-right: 1rem;
+}
+
+.user-profile-page-actions-comment-photo img{
+    height: 2rem;
+    width: 2rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: solid var(--color-dark) 2px;
+}
+
+.user-profile-page-actions-comment-mobile textarea{
+    width: 100%;
+    height: 2.5rem;
+    font-size: 1.1rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 10px;
+    color: var(--color-dark);
+    background: transparent;
+    border: solid 1px var(--color-dark);
+    overflow: hidden;
+    font-family: "Poppins", sans-serif;
+}
+
+.user-profile-page-actions-comment textarea{
+    width: 100%;
+    height: 2.5rem;
+    font-size: 1.1rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 10px;
+    color: var(--color-dark);
+    background: transparent;
+    border: solid 1px var(--color-dark);
+    overflow: hidden;
+    font-family: "Poppins", sans-serif;
+}
+
+.user-profile-page-actions-comment-textarea-height{
+    height: 4rem;
+}
+
+.user-profile-page-actions-comment-mobile span{
+    border-radius: 50%;
+    background: var(--hover);
+    padding: 0.5rem;
+    margin-left: 1rem;
+}
+
+.user-profile-page-actions-comment span{
+    border-radius: 50%;
+    background: var(--hover);
+    padding: 0.5rem;
+    margin-left: 1rem;
+}
+
+.user-profile-page-comments{
+    padding: 0 0.5rem;
+}
+
+#getComment{
+    height: 250px;
+}
+
+#scrollBottom{
+    height: 100%;
+    overflow-y: auto;
+}
+
+/* .element_height{
+    background: red;
+} */
+
+.user-profile-page-comments h1{
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-align: left;
+}
+
+.comment-post-actions{
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.comment-post-actions span{
+    margin-right: 0.5rem;
+}
+
+.comment-post-actions span:first-child{
+    font-size: 1rem;
+}
+
+.liked{
+    color: var(--color-danger)
+}
+
+#more{
+    display: none;
+}
+
+#more2{
+    display: none;
+}
+
+#hideBtn2{
+    display: none;
+}
+
+#hideBtn{
+    display: none;
+}
+
+
+/*=========================== Change Like Icon Button Color =========================*/
+.checkLike{
+    color: var(--color-primary-red);
+}
+
+/*-------------------------------- User Profile Post For Desktop ---------------------------------*/
+.user-profile-post-desktop{
+    display: flex;
+    padding: 0.7rem 1rem;
+    justify-content: space-between;
+}
+
+.user-profile-post-desktop-left{
+    flex-basis: 59%;
+    padding: 0.7rem;
+    background: var(--color-background-white);
+    border-radius: 10px;
+    height: max-content;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.user-profile-post-desktop-left .user-post-photo img{
+    border-radius: 10px;
+    max-width: 100%;
+    max-height: 32rem;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.user-profile-post-desktop-right{
+    flex-basis: 39%;
+    padding: 0.7rem;
+    background: var(--color-background-white);
+    border-radius: 10px;
+    height: max-content;
+}
+
+.user-profile-post-desktop-left .sscsc{
+    padding: 0.6rem;
+    background: var(--hover);
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 0.5rem 0;
+    cursor: pointer;
+}
+
+.user-post-content button{
+    background: transparent;
+    color: var(--color-dark);
+    cursor: pointer;
+}
+
+.font-size p{
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+
+
+
+/* ----------------------------------  For Pop-Up ------------------------------------*/
+.user-profile-edit-pop-up-bg{
+    position: fixed;
+    top: 0;
+    margin: 0% auto;
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: var(--flex-color-bg); /* Fallback color */
+    padding-top: 60px;
+    display: none;
+}
+
+.user-profile-edit-pop-up-bg::-webkit-scrollbar{
+    display: none;
+}
+
+.user-profile-edit-pop-up{
+    margin: 2% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    width: 50%;
+    background: var(--color-background-white);
+    border-radius: 10px;
+    padding: 0.7rem 1rem;
+}
+
+.user-profile-edit-pop-up-head-texts{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: #fff;
+}
+
+.user-profile-edit-pop-up-head{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid rgba(87, 87, 87, 0.603);
+}
+
+.user-profile-edit-pop-up-head h1{
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.user-profile-edit-pop-up-head span{
+    font-size: 2rem;
+    cursor: pointer;
+    margin-right: 1rem;
+    background: var(--hover);
+    padding: 0.3rem;
+    border-radius: 50%;
+    transition: all ease 300ms;
+}
+
+
+.user-profile-edit-pop-up-head span:hover{
+    background: var(--color-danger);
+}
+
+.user-profile-edit-pop-up-bg-photo img{
+    height: 14rem;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.user-profile-edit-pop-up-head-btn{
+    margin: 0.8rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-profile-edit-pop-up-head-btn p{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.user-profile-edit-pop-up-head-btn span{
+    font-size: 0.8rem;
+    margin-left: 0.2rem;
+}
+
+.edit-btn{
+    width: 4rem;
+    height: 1.4rem;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    background: var(--color-danger);
+    color: var(--color-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+
+.user-profile-edit-pop-up-bg-profile-photo{
+    display: flex;
+    justify-content: center;
+    width: 12rem;
+    text-align: center;
+}
+
+.user-profile-edit-pop-up-bg-profile-photo img{
+    border-radius: 50%;
+    border: var(--color-dark) 2px solid;
+}
+
+.user-bio-status{
+    width: 100%;
+    text-align: center;
+    background: var(--hover);
+}
+
+/* --------------========================== Authentications =========================------------------*/
+.registration-wrapper{
+    background-image: linear-gradient(rgba(240, 240, 240, 0.712), rgba(161, 161, 161, 0.4)),  url(../images/bg2.jpg);
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    position: absolute;
+}
+
+.registration-form{
+    padding: 2.5rem;
+    background: rgb(255, 255, 255);
+    width: max-content;
+    border-radius: 5px;
+    margin: 6% auto;
+}
+
+.registration-form-head{
+    line-height: 1.9rem;
+}
+
+.registration-form-head h1{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #18191A;
+}
+
+.registration-form-head p{
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #18191A;
+}
+
+.registration-form-head span{
+    color: #677db6;
+    font-weight: 500;
+}
+
+.registration-form form{
+    margin-top: 1rem;
+}
+
+.registration-form form input{
+    border: 1px solid rgba(145, 145, 145, 0.575);
+    width: 100%;
+    height: 2.5rem;
+    font-size: 1rem;
+    padding: 0 0.5rem;
+    color: #555;
+    border-radius: 5px;
+}
+
+.registration-form form button{
+    width: 100%;
+    height: 2.5rem;
+    font-size: 0.9rem;
+    background: #677DB6;
+    color: white;
+    cursor: pointer;
+}
+
+/* --------------- Registration for Mobile ----------------------*/
+.registration-wrapper-mobile{
+    display: none;
+    width: 100%;
+    /* height: 100vh; */
+    background-position: center;
+    background-size: cover;
+    padding: 1rem 2rem;
+    font-family: "Ubuntu" sans-serif;
+}
+
+.registration-wrapper-mobile .logo{
+    margin: 1rem 0;
+    width: 3rem;
+    color: #414141;
+}
+
+.registration-form-head-mobile h1{
+    font-size: 2rem;
+    line-height: 2.4rem;
+    margin-top: 2rem;
+    color: #414141;
+}
+
+.registration-form-head-mobile p{
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: rgb(112, 112, 112);
+    margin-top: 0.6rem;
+}
+
+.registration-form-head-mobile span{
+    color: #677db6;
+    margin: 1rem 0;
+}
+
+.registration-wrapper-mobile form{
+    margin-top: 1rem;
+}
+
+.input-field .colored{
+    background: #677db6;
+    color: white;
+    margin-top: 2rem;
+}
+
+.input-field .coloredd{
+    background: #677db6;
+    color: white;
+}
+
+.input-field .coloredd::placeholder{
+    color: white;
+}
+
+.input-field .colored::placeholder{
+    color: white;
+}
+
+form .input-field{
+    margin-bottom: 1rem;
+}
+
+.registration-wrapper-mobile form input{
+    width: 100%;
+    height: 3rem;
+    padding: 0 0.9rem;
+    font-size: 1.1rem;
+    color: #2C2D2D;
+    background: #f5f5f5;
+    border-radius: 5px;
+}
+
+.registration-wrapper-mobile form input::placeholder{
+    color: #a9a9a7;
+    font-weight: 400;
+}
+
+.registration-wrapper-mobile form button{
+    width: 100%;
+    height: 3rem;
+    font-size: 1rem;
+    background: #b22341;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    margin-top: 2rem;
+    border-radius: 10px;
+}
+
+.error-msg{
+    color: #b81e1e;
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 5px;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    margin-bottom: 10px;
+}
+
+.error-msg-mobile{
+    color: #721c24;
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 5px;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    margin: 1rem 0;
+}
+
+.success-msg{
+    color: #1c725f;
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 5px;
+    background: #32b388;
+    border: 1px solid #f5c6cb;
+    margin: 1rem 0;
+}
+
+.powered-by{
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.thank-you{
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.thank-you p{
+    font-size: 1rem;
+    color: #18191A;
+}
+
+.thank-you span{
+    font-size: 1.9rem;
+    color: #ffffff;
+    margin-right: 0.5rem;
+}
+
+.auth-btn{
+    width: 100%;
+    height: 3rem;
+    font-size: 1.1rem;
+    background: #721c24;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    margin-top: 2rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resend input{
+    width: 5rem;
+    height: 1.5rem;
+    background: transparent;
+    color: #721c24;
+}
+
+
+
+
+/* --------------------------------------------============= Mobile Messaging ===================----------------------------*/
+
+.hide-mobile-message{
+    display: none;
+}
+
+.mobile-message{
+    margin-top: 0rem;
+}
+.mobile-message-head{
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 0.5rem;
+}
+
+.mobile-message-head span{
+    margin-right: 1rem;
+    font-size: 1.7rem;
+}
+
+.mobile-message-head p{
+    font-size: 1.3rem;
+}
+
+.mobile-message-search{
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 0.5rem;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.mobile-message-search2{
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 0.5rem;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+/* -----------==============Search POP UP PAGE-----------============== */
+.mobile-search-page-pop-up{
+    height: 100vh;
+    width: 100vw;
+    z-index: 3000;
+    background: var(--color-background-white);
+    position: fixed;
+    top: 0;
+    display: none;
+    overflow: auto;
+}
+
+.mobile-search-page-pop-up-msg-request{
+    height: 100vh;
+    width: 100vw;
+    z-index: 3000;
+    background: var(--color-background-white);
+    position: fixed;
+    top: 0;
+    display: none;
+    overflow: auto;
+}
+
+.mobile-message-search2 span{
+    font-size: 1.5rem;
+    margin-right: 0.7rem;
+}
+
+.mobile-message-search span{
+    font-size: 1.5rem;
+    margin-right: 0.7rem;
+}
+
+.mobile-message-search2 input{
+    background: transparent;
+    height: 1.7rem;
+    width: 100%;
+    font-size: 1.2rem;
+    color: var(--color-dark);
+}
+
+.mobile-message-search input{
+    background: transparent;
+    height: 1.7rem;
+    width: 100%;
+    font-size: 1.2rem;
+    color: var(--color-dark);
+}
+
+.mobile-message-search2 input::placeholder{
+    font-size: 1rem;
+}
+
+.mobile-message-search input::placeholder{
+    font-size: 1rem;
+}
+
+.mobile-chats{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 0.5rem;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.mobile-chats-friends{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobile-chats-user-details{
+    line-height: 1.5rem;
+}
+
+.mobile-chats-user-details p{
+    font-size: 1.3rem;
+}
+
+.mobile-chats-user-details small{
+    font-size: 1rem;
+}
+
+.mobile-chats-profile-photo{
+    width: 2.5rem;
+    margin-right: 1rem;
+
+}
+
+.mobile-chats-profile-photo img{
+    height: 2.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--color-dark);
+}
+
+
+.mobile-chats .mobile-chats-online-status .material-icons-sharp{
+    font-size: 1rem;
+    color: var(--color-success);
+}
+
+.mobile-chats .mobile-chats-online-status .material-icons-sharp.offline{
+    font-size: 1rem;
+    color: #555;
+}
+
+.mobile-chats-online-status-span-new-msg{
+    color: #2E89FF;
+} */
+
+
+/*-------------------- For Chat Box ------------------------*/
+
+.mobile-chat-top{
+    display: flex;
+    align-items: center;
+    padding: 0.9rem 0.7rem;
+    justify-content: space-between;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.mobile-chat-top-profile{
+    display: flex;
+    align-items: center;
+}
+
+.mobile-chat-top-profile span{
+    margin-right: 0.5rem;
+    font-size: 1.7rem;
+}
+
+.mobile-chat-top span{
+    font-size: 1.7rem;
+}
+
+.mobile-chat-top-profile-photo{
+    width: 2.5rem;
+    margin-right: 0.5rem;
+}
+
+.mobile-chat-top-profile-photo img{
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.mobile-chat-top-profile-details{
+    line-height: 1.2rem;
+}
+
+.mobile-chat-top-profile-details p{
+    font-size: 1.1rem;
+}
+
+.mobile-chat-top-profile-details small{
+    font-size: 1.1rem;
+}
+
+
+/*----------------------===================== Chat Area =====================--------------------------*/
+.mobile-chat-area{
+    height: 100vh;
+    background: var(--color-background-white);
+}
+
+.mobile-chat-box{
+    padding: 10px 0.7rem 20px 0.7rem;
+    overflow-y: auto;
+    height: 90vh;
+    margin-top: 2.5rem;
+}
+
+.mobile-chat-box::-webkit-scrollbar{
+    width: 0;
+}
+
+.mobile-chat-box .m-chat{
+    margin: 15px 0;
+}
+
+.mobile-chat-box .m-chat p{
+    color: #ffff;
+    word-wrap: break-word;
+    padding: 8px 16px;
+    box-shadow: 0 0 32px rgb(0 0 0 / 8%), 0 16px 16px -16px rgb(0 0 0 /10%);
+}
+
+.mobile-chat-box .mobile-outgoing-chat{
+    display: flex;
+}
+
+.mobile-outgoing-chat .mobile-chat-details{
+    margin-left: auto;
+    max-width: calc(100% - 30px);
+}
+
+.mobile-outgoing-chat .mobile-chat-details p{
+    border-radius: 18px 18px 0 18px;
+    background: #555;
+}
+
+.mobile-chat-box .mobile-incoming-chat{
+    display: flex;
+    align-items: flex-end;
+}
+
+.mobile-chat-box .mobile-incoming-chat img{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+}
+
+.mobile-incoming-chat .mobile-chat-details{
+    margin-left: 10px;
+    margin-right: auto;
+    max-width: calc(100% - 30px);
+}
+
+.mobile-incoming-chat .mobile-chat-details p{
+    background: #677DB6;
+    border-radius: 18px 18px 18px 0px;
+}
+
+/*-------------- ================ Typing Area =================-------------------*/
+
+.mobile-chat-area .mobile-typing-area{
+    display: flex;
+    padding: 18px 0.7rem;
+    justify-content: space-between;
+}
+
+.mobile-typing-area input{
+    height: 45px;
+    width: calc(100% - 58px);
+    font-size: 17px;
+    border: 1px solid #ccc;
+    padding: 0 13px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.mobile-typing-area button{
+    width: 55px;
+    height: 45px;
+    border: none;
+    outline: none;
+    background: #333;
+    color: #fff;
+    font-size: 19px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+.mobile-typing-area button span{
+    color: #fff;
+}
+
+
+/*----------------------==================== Mobile Chat Page ===================-------------------*/
+.mobile-chat-page{
+    height: 100vh;
+}
+
+.mobile-chat-page-head{
+    border-bottom: 1px solid #e6e6e6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 20;
+    background: var(--color-background-white);
+}
+
+.mobile-chat-page-head-div1{
+    display: flex;
+    align-items: center;
+}
+
+.mobile-chat-page-head-back{
+    display: flex;
+    align-items: center;
+}
+
+.mobile-chat-page-head-back span{
+    font-size: 1.6rem;
+}
+
+.mobile-chat-page-head-back-photo{
+    width: 2.5rem;
+    margin-left: 0.3rem;
+}
+
+.mobile-chat-page-head-back-photo img{
+    border-radius: 50%;
+    height: 2.5rem;
+    object-fit: cover;
+    border: 1px solid var(--color-dark);
+}
+
+.mobile-chat-page-head-friend-name{
+    line-height: 1rem;
+    margin-left: 0.7rem;
+}
+
+.mobile-message-input{
+    
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    background: var(--color-background-white);
+}
+
+
+.mobile-message-input-input{
+    width: 80%;
+    height: 45px;
+    font-size: 17px;
+    border: 1px solid #ccc;
+    padding: 7px;
+    border-radius: 5px 0 0 5px ;
+    outline: none;
+}
+
+.mobile-message-input button{
+    width: 20%;
+    height: 45px;
+    background: #18191A;
+}
+
+.mobile-message-input button span{
+    color: white;
+    font-size: 1.9rem;
+}
+
+
+/* .mobile-chat-box .m-chat:last-child{
+    margin-bottom: 2rem;
+} */
+
+.mobile-message-input button.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+/*---------------============ Message Request =================------------------*/
+.msg_request{
+    cursor: pointer;
+}
+
+
+/*===================================== UPDATE PROFILE INFO MODAL =====================================*/
+
+.mobile-profile-pic-update-modal{
+    padding: 0;
+    background: var(--color-background-white);
+    line-height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-height: 0;
+    transition: max-height 3ms;
+}
+
+.mobile-profile-pic-update-modal-click{
+    max-height: 100%;
+    padding: 0.5rem 0.5rem 4rem 0.5rem;
+}
+
+
+.info-flex .occupation form{
+    display: flex; 
+    align-items: center;
+    margin-bottom: 0.6rem;
+}
+
+.info-flex .occupation form span{
+    font-size: 1.5rem;
+}
+
+.info-flex .occupation form input{
+    padding: 0.1rem;
+    border-radius: 5px;
+    margin-left: 0.6rem;
+    padding-left: 0.6rem;
+    height: 2rem;
+    width: 100%;
+}
+
+.info-flex .occupation form .select{
+    padding: 0.1rem;
+    border-radius: 5px;
+    margin-left: 0.6rem;
+    padding-left: 0.6rem;
+    height: 2rem;
+    width: 100%;
+}
+
+.info-flex .occupation form .update-btn{
+    width: 2rem;
+    padding: 0.1rem;
+    border-radius: 5px;
+    margin-left: 0.7rem;
+    text-transform: capitalize;
+    background: var(--color-success);
+    color: white;
+    font-size: 0.9rem;
+}
+
+.user-bio textarea{
+    width: 100%;
+    height: 6rem;
+    font-family: "Poppins", sans-serif;
+    padding: 0.2rem;
+    border-radius: 5px;
+}
+
+.user-bio textarea::placeholder{
+    font-size: 0.9rem;
+}
+
+.img-input{
+    border: 1px solid var(--color-dark);
+}
+.img-input2{
+    border: 1px solid var(--color-dark);
+}
+
+
+/* =================== Image View Pop Ups =============== */
+.image_view_pop_up{
+    width: 100%;
+    height: 100vh;
+    background: var(--color-text-white);
+    padding: 0.3rem;
+    position: fixed;
+    top: 0;
+    z-index: 3000;
+    display: none;
+}
+
+.image_view_pop_up span{
+    font-size: 1.7rem;
+    background: #677db6;
+    padding: 0.2rem;
+    border-radius: 50%;
+    color: #ffffff;
+    margin: 0.5rem 0;
+}
+
+.image_view_pop_up_cover{
+    width: 100%;
+    height: 100vh;
+    background: var(--color-text-white);
+    padding: 0.3rem;
+    position: fixed;
+    top: 0;
+    z-index: 3000;
+    display: none;
+}
+
+.image_view_pop_up_cover span{
+    font-size: 1.7rem;
+    background: #677db6;
+    padding: 0.2rem;
+    border-radius: 50%;
+    color: #ffffff;
+    margin: 0.5rem 0;
+}
+
+
+/* ======================== post_reactions Pop up =========================== */
+.post_reactions{
+    background: var(--color-background-white);
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    display: none;
+}
+
+/* ============================= Video Player Style ==============================*/
+.overlayVid{
+    position: relative;
+    display: inline-block;
+}
+
+.overlayVid img{
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 45%;
+    text-align: center;
+    width: 60%;
+    color: white;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 2rem;
+    cursor: pointer;
+    width: 40px;
+}
+
+
+/* ================================= RED DOT NOTIFICATION ============================== */
+.red_dot_notification{
+    position: relative;
+}
+
+.red_dot_not{
+    position: absolute;
+    right: -6px;
+    top: -7px;
+}
+
+.red_dot_not span{
+    font-size: 0.8rem;
+    color: rgb(180, 0, 0);
+}
+
+
+/* ============================= Pop Up for Mobile Post More =============================== */
+
+#more-post-mobile{
+    display: none;
+    width: 100%;
+    padding: 0.7rem 0.4rem 0.3rem 0.4rem;
+    position: fixed;
+    bottom: 0;
+    background: var(--color-background-white);
+    height: max-content;
+    margin-bottom: 3.8rem;
+    line-height: 2.7rem;
+    border: var(--border-night);
+}
+
+#more-post-mobile span{
+    font-size: 2rem;
+    color: var(--color-dark);
+}
+
+#more-post-mobile p{
+    font-size: 1.2rem;
+}
+
+/* .postMoreOptionDesktop{
+    display: block;
+} */
+
+.postMoreOption{
+    display: none;
+}
+
+#hideView{
+    display: none;
+}
+
+#hideEdit{
+    display: none;
+}
+
+
+/* ============================ Edit Post POP UP ============================= */
+
+#edit-post-mobile{
+    display: none;
+}
+
+.edit-post-mobile{
+    width: 100%;
+    padding: 0.7rem 0.4rem 0.3rem 0.4rem;
+    position: fixed;
+    bottom: 0;
+    background: var(--color-background-white);
+    height: max-content;
+    margin-bottom: 3.8rem;
+    border: var(--border-night);
+}
+
+.edit-post-mobile textarea{
+    font-size: 0.9rem;
+    color: var(--color-dark);
+    width: 100%;
+    background: transparent;
+    border: var(--border-night);
+    padding: 0.3rem;
+    height: 5rem;
+    font-family: sans-serif;
+}
+
+.edit-post-mobile button{
+    margin-bottom: 1rem;
+    width: 4rem;
+    height: 30px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    background: #0178D6;
+    color: white;
+}
+
+.edit_post_btn{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+
+/* ============================= Pop Up for Desktop Post More =============================== */
+#more-post-desktop{
+    padding: 1rem 0.7rem;
+    justify-content: space-between;
+    display: none;
+    background: var(--color-background-white);
+    z-index: 7000;
+    width: 40%;
+    position: fixed;
+    bottom: 0;
+    line-height: 2.5rem;
+    border: var(--border-night);
+}
+
+#more-post-desktop span{
+    color: white;
+}
+
+.user-profile-action-icons{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*==========================RESPONSIVE SCREEN FOR SMALL LAPTOP 
+AND BIG TABLETS======================*/
+
+@media screen and (max-width: 1200px) {
+
+    .postMoreOptionDesktop{
+        display: block;
+    }
+
+    .switch_btw_friends{
+        display: none;
+    }
+
+    .search-input input{
+        display: none;
+    }
+
+    .middle .post{
+        margin-right: 20px;
+    }
+
+    .middle{
+        padding: 0 0;
+    }
+
+    .hide-mobile-message{
+        display: none;
+    }
+    
+}
+
+
+/*==========================RESPONSIVE SCREEN TABLETS
+ and MOBILE PHONES======================*/
+
+ @media screen and (max-width: 900px) {
+
+    #more-post-desktop{
+        width: 100%;
+    }
+
+    .postMoreOptionDesktop{
+        display: block;
+    }
+
+    .feed-img img{
+        border-radius: var(--border-radius-20px);
+        object-fit: cover;
+        max-width: 100%;
+    }
+
+    .switch_btw_friends{
+        display: none;
+    }
+
+    .registration-wrapper-mobile{
+        display: block;
+    }
+
+    .registration-wrapper{
+        display: none;
+    }
+    .user-profile-post-desktop{
+        display: none;
+    }
+
+     .nav-user-profile .profile-name{
+         display: none;
+     }
+
+     aside ul li h2{
+         display: none;
+     }
+
+     .middle{
+        flex-basis: auto;
+    }
+    .right{
+        display: none;
+    }
+
+    .middle .post{
+        margin-right: 0px;
+    }
+
+    .notifications{
+        padding-right: 0.2rem;
+        padding-left: 0.2rem;
+        width: 50%;
+    }
+
+    .friends-left-head-lists div p{
+        display: none;
+    }
+
+    .friends{
+        grid-template-columns: 10% 90%;
+    }
+
+    .friends-left-head h1{
+        display: none;
+    }
+
+    .friends-left-head-lists .hide{
+        display: none;
+    }
+
+    .user-profile-page{
+        display: block;
+    }
+
+    .desktop-user-profile-page{
+        display: none;
+    }
+
+    .user-profile-post{
+        display: block;
+    }
+}
+
+
+
+/*==========================RESPONSIVE SCREEN TABLETS
+ and MOBILE PHONES======================*/
+
+ @media screen and (max-width: 640px) {
+    #more-post-desktop{
+        display: none;
+    }
+
+    .postMoreOptionDesktop{
+        display: none;
+    }
+
+    .postMoreOption{
+        display: block;
+    }
+    
+    #more-post-mobile{
+        display: none;
+    }
+
+    .switch_btw_friends{
+        display: flex;
+    }
+
+    .registration-wrapper-mobile{
+        display: block;
+    }
+    
+    .registration-wrapper{
+        display: none;
+    }
+
+    .user-profile-post-desktop{
+        display: none;
+    }
+     .user-profile-post{
+         display: block;
+     }
+     .desktop{
+         display: none;
+     }
+
+     .notifications{
+         display: none;
+     }
+
+    .post{
+        box-shadow: none;
+        border: solid 0.3px rgba(116, 116, 116, 0.24);
+        display: none;
+    }
+
+     .mobile-container{
+         display: block;
+     }
+
+     aside{
+        display: none;
+    }
+
+    .right{
+        display: none;
+    }
+
+    .middle .create-post{
+        margin-right: 0;
+    }
+
+    .actions-create-post .actions span{
+        font-size: 1.3rem;
+    }
+
+    .actions-create-post .actions h1{
+        font-size: 1.1rem;
+    }
+
+    .feed{
+        padding: 1rem 0.5rem;
+        margin-top: 0.6rem;
+        box-shadow: none;
+        border: solid 0.3px rgba(116, 116, 116, 0.24);
+    }
+
+    .new-post-head h1{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .newpost{
+        width: 95%;
+    }
+
+    .new-post-add .new-post-add-text h1{
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    
+    .new-post-add .new-post-span a{
+        margin: 0 0.3rem;
+    }
+
+    .mobile-menu{
+        display: block;
+    }
+
+    .mobile-notifications{
+        display: block;
+    }
+
+    .mobile-page-header{
+        display: flex;
+    }
+
+    .friends{
+        grid-template-columns: 100%;
+    }
+
+    .friends-left{
+        display: none;
+    }
+
+    .friends-right{
+        padding: 0;
+        padding-bottom: 3rem;
+    }
+
+    .friends-right-cards{
+        width: 10rem;
+        margin: 0 0.1rem 1.2rem 0;
+    }
+
+    .friends-right-head{
+        margin-left: 1rem;
+    }
+
+
+    .friends-right-cards-wall-photo img{
+        height: 4rem;
+        width: 100%
+    }
+    
+    .friends-right-cards-profile-photo{
+        width: 4rem;
+        margin-top: -1.5rem;
+    }
+    
+    .friends-right-cards-profile-photo img{
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    
+    .friends-right-cards-texts{
+        line-height: 1.2rem;
+        margin: 1rem 0;
+    }
+    
+    .friends-right-cards-texts h1{
+        font-size: 1rem;
+    }
+    
+    .friends-right-cards-texts p{
+        font-size: 0.7rem;
+    }
+    
+    .friends-card-btn{
+        width: 8rem;
+        height: 2rem;
+        border-radius: 20px;
+        background: transparent;
+        font-size: 1rem;
+        border: solid 1px var(--color-dark);
+        color: var(--color-dark);
+        cursor: pointer;
+        margin-top: 1rem;
+    }
+
+    .mobile-top-options{
+        display: flex;
+    }
+
+    .mobile-hide{
+        display: none;
+    }
+
+    .friends-right-mobile{
+        display: block;
+    }
+
+    .friends-right-confirm-pop-up{
+        width: 80%;
+    }
+
+    .user-profile-page{
+        display: block;
+    }
+
+    .desktop-user-profile-page{
+        display: none;
+    }
+
+    .hide-mobile-message{
+        display: block;
+    }   
+}
